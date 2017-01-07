@@ -50,15 +50,6 @@ in your `~/.atom/keymap.cson` file.
 * Go to *Install* section
 * Search for `RebelChat` package. Once it found, click `Install` button to install package.
 
-## Dependencies
-
-On macOS you have to install in order to support irc
-
-```
-$ brew install icu4c --force
-$ brew link icu4c --force --overwrite
-```
-
 ### Manual installation
 
 You can install the latest `RebelChat` version manually from console:
