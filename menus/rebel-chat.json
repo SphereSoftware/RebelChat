@@ -1,0 +1,18 @@
+{
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "RebelChat",
+          "submenu": [
+            {
+              "label": "Toggle Chat window",
+              "command": "rebel-chat:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

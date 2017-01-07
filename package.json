@@ -1,0 +1,78 @@
+{
+  "name": "RebelChat",
+  "main": "./lib/main",
+  "version": "0.4.1",
+  "description": "Integrated chat system",
+  "keywords": [
+    "rebel",
+    "chat",
+    "slack",
+    "im",
+    "messenger"
+  ],
+  "activationCommands": {
+    "body": [
+      "rebel-chat:toggle"
+    ]
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "3.0.0": "getProviders"
+      }
+    }
+  },
+  "repository": "https://github.com/SphereSoftware/RebelChat",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-loader": "^1.6.0",
+    "eslint-plugin-import": "^2.1.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.3.0",
+    "grunt": "^1.0.1",
+    "grunt-apm": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "load-grunt-tasks": "^3.1.0",
+    "request": "^2.55.0",
+    "time-grunt": "^1.0.0"
+  },
+  "dependencies": {
+    "@slack/client": "^3.5.4",
+    "atom-space-pen-views": "^2.2.0",
+    "classnames": "^2.2.5",
+    "fs-plus": "^2.9.2",
+    "fuzzaldrin": "^2.1.0",
+    "hipchatter": "^1.0.0",
+    "node-xmpp": "^1.0.5",
+    "irc": "git+https://github.com/SphereSoftware/node-irc.git",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-file-reader-input": "^1.1.0",
+    "react-html-parser": "^1.0.3",
+    "react-intl": "^2.1.4",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-actions": "^1.1.0",
+    "redux-logger": "^2.7.0",
+    "redux-saga": "^0.13.0",
+    "skyweb-revised": "git+https://github.com/shemerey/skyweb.git",
+    "styled-components": "^1.0.7",
+    "svg-inline-react": "^1.0.2",
+    "twit": "^2.2.5",
+    "underscore-plus": "^1.6.6"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "atom-text-editor.im-token-input": {
+    "enter": "rebel-chat:enter-token",
+    "escape": "rebel-chat:close-token-window"
+  },
+  "atom-text-editor.im-editor": {
+    "enter": "rebel-chat:send"
+  },
+  "atom-text-editor.im-editor.autocomplete-active": {
+    "enter": "autocomplete-plus:confirm",
+    "tab": "autocomplete-plus:confirm"
+  },
+  ".platform-darwin": {
+    "cmd-K": "rebel-chat:choose-channel"
+  },
+  "body": {
+    "ctrl-alt-cmd-m": "rebel-chat:toggle",
+    "cmd-l": "rebel-chat:focus-input",
+    "cmd-1": "rebel-chat:team-1",
+    "cmd-2": "rebel-chat:team-2",
+    "cmd-3": "rebel-chat:team-3",
+    "cmd-4": "rebel-chat:team-4",
+    "cmd-5": "rebel-chat:team-5",
+    "cmd-6": "rebel-chat:team-6",
+    "cmd-7": "rebel-chat:team-7",
+    "cmd-8": "rebel-chat:team-8",
+    "cmd-9": "rebel-chat:team-9"
+  }
+}

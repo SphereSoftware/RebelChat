@@ -1,0 +1,6 @@
+.DS_Store
+listToConnect.js
+.env
+npm-debug.log
+node_modules
+design
