@@ -1,6 +1,9 @@
 # RebelChat
 > Be Rebel - Chat Rebel. 💬
 
+
+[![Build Status](https://travis-ci.org/SphereSoftware/RebelChat.svg?branch=master)](https://travis-ci.org/SphereSoftware/RebelChat)
+
 `RebelChat` is a integrated `Chat` system for the Hackable Atom Editor. It is a modern way to keep
 in touch with any team, and keep your messaging under control right in your editor.
 
