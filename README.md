@@ -60,13 +60,22 @@ $ brew link icu4c --force --overwrite
 
 You can install the latest `RebelChat` version manually from console:
 
+
 ```bash
-git clone git@github.com:SphereSoftware/RebelChat.git && cd RebelChat
-apm i
-apm link .
+$ apm i RebelChat
 ```
 
-Then restart Atom editor. This command will clone, install all dependencies, and link `RebelChat` to the `~/.atom/packages` folder
+If you wish you can install it from source, so you will be able to develop it test it on your own
+environment.
+
+```bash
+$ git clone git@github.com:SphereSoftware/RebelChat.git && cd RebelChat
+$ apm i
+$ apm link .
+```
+
+Then restart Atom editor. This command will clone, install all dependencies, and link `RebelChat` to
+the `~/.atom/packages` folder
 
 ## Thanks
 

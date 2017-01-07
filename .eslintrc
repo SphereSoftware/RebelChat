@@ -15,6 +15,13 @@
     "no-console": 0,
     "semi": 0,
     "max-len": 0,
+    "comma-dangle": ["error", {
+      "arrays": "never",
+      "objects": "always",
+      "imports": "never",
+      "exports": "never",
+      "functions": "ignore",
+    }],
     "class-methods-use-this": 0,
     "no-param-reassign": 0,
     "arrow-body-style": 0,
