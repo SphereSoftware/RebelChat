@@ -61,7 +61,6 @@
     "fs-plus": "^2.9.2",
     "fuzzaldrin": "^2.1.0",
     "hipchatter": "^1.0.0",
-    "irc": "git+https://github.com/SphereSoftware/node-irc.git",
     "node-xmpp": "^1.0.5",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

@@ -69,7 +69,6 @@ export default class NewTeamScreen extends Component {
         <item onClick={() => ::this.setState({ client: 'slack' })} ><SlackIcon /></item>
         <item onClick={() => ::this.setState({ client: 'hipchat' })} ><HipchatIcon /></item>
         <item onClick={() => ::this.setState({ client: 'skype' })} ><SkypeIcon /></item>
-        <item onClick={() => ::this.setState({ client: 'irc' })} ><IrcIcon /></item>
         <item onClick={() => ::this.setState({ client: 'twitter' })} ><TwitterIcon /></item>
       </nav>
     )
