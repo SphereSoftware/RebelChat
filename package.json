@@ -1,7 +1,7 @@
 {
   "name": "RebelChat",
   "main": "./lib/main",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Integrated chat system",
   "keywords": [
     "rebel",
