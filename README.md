@@ -3,6 +3,9 @@
 
 
 [![Build Status](https://travis-ci.org/SphereSoftware/RebelChat.svg?branch=master)](https://travis-ci.org/SphereSoftware/RebelChat)
+![appveyor Build Status](https://ci.appveyor.com/api/projects/status/github/SphereSoftware/RebelChat?branch=master&svg=true)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
+
 
 `RebelChat` is a integrated `Chat` system for the Hackable Atom Editor. It is a modern way to keep
 in touch with any team, and keep your messaging under control right in your editor.
