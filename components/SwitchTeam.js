@@ -64,10 +64,8 @@ class SwitchTeam extends Component {
 
     // Focus input after team switch
     setTimeout(() => {
-      let el
-      if (el = window.document.querySelector('.im-editor')) {
-        el.focus()
-      }
+      const el = window.document.querySelector('.im-editor')
+      if (el) { el.focus() }
     }, 0)
   }
 

@@ -158,16 +158,6 @@ class MasterInput extends Component {
     })
   }
 
-  renderEmojiPicker() {
-    if (this.state.showEmojiPicker) {
-      return (
-        <PickerElement>
-          <Picker onClick={emoji => ::this.insertEmoji(emoji)} />
-        </PickerElement>
-      )
-    }
-  }
-
   toggleEmojiPicker() {
     this.setState({
       showEmojiPicker: !this.state.showEmojiPicker,
@@ -178,6 +168,19 @@ class MasterInput extends Component {
       'rebel-chat:focus-msg-editor'
     )
   }
+
+  renderEmojiPicker() {
+    if (this.state.showEmojiPicker) {
+      return (
+        <PickerElement>
+          <Picker onClick={emoji => ::this.insertEmoji(emoji)} />
+        </PickerElement>
+      )
+    }
+
+    return <div />
+  }
+
 
   render() {
     return (

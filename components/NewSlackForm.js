@@ -2,7 +2,6 @@
 
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { CompositeDisposable } from 'atom'
 
 import { setStatus } from '../lib/redux/modules/status'
 import TeamLoader from '../lib/TeamLoader'

@@ -40,6 +40,8 @@ class Main extends Component {
     if (this.props.currentChannel.isMember) {
       return <MasterInput />
     }
+
+    return null
   }
 
   render() {

@@ -1,12 +1,5 @@
 'use babel';
 
-import {
-  UserObject,
-  TeamObject,
-  ChannelObject,
-  MessageObject,
-} from '../../../lib/objects'
-
 import status, { setStatus } from '../../../lib/redux/modules/status'
 
 describe('status reducer', () => {

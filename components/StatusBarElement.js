@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 // Loader with animations
 const Wrap = styled.span`
-  color: ${props => props.counter === 0 ? '' : '#61AFEF'};
+  color: ${props => (props.counter === 0 ? '' : '#61AFEF')};
   margin-left: 10px;
   cursor: pointer;
 `
@@ -31,6 +31,10 @@ function mapStateToProps(state) {
   return {
     counter,
   }
+}
+
+StatusBarElement.propTypes = {
+  counter: React.PropTypes.number,
 }
 
 export default connect(mapStateToProps)(StatusBarElement)

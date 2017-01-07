@@ -1,10 +1,7 @@
 'use babel';
 
 import {
-  UserObject,
   TeamObject,
-  ChannelObject,
-  MessageObject,
 } from '../../../lib/objects'
 
 import { addNewTeam, updateTeam } from '../../../lib/redux/modules/teams'

@@ -4,7 +4,7 @@ import {
   UserObject,
 } from '../../../lib/objects'
 
-import users, { setAllUsers, addNewUser, updateUser } from '../../../lib/redux/modules/users'
+import users, { addNewUser } from '../../../lib/redux/modules/users'
 
 describe('status reducer', () => {
   const u1 = new UserObject({

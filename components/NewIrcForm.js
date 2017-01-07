@@ -105,7 +105,7 @@ class NewIrcForm extends Component {
     const server = e.target.elements.server.value
     const password = e.target.elements.password.value
     const channels = e.target.elements.channels.value.split(/\s+/)
-                      .map((c) => c.trim()).filter((x) => x)
+                      .map(c => c.trim()).filter(x => x)
 
     if (nick && server) {
       dispatch(setStatus('inProgress'))
@@ -152,7 +152,7 @@ function mapStateToProps(state) {
   return {
     teams: state.teams,
   }
-}   
-    
+}
+
 export default connect(mapStateToProps)(NewIrcForm)
 

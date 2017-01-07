@@ -5,12 +5,7 @@ import {
 } from '../../../lib/objects'
 
 import channels, {
-  setAllChannels,
-  addChannels,
   addNewChannel,
-  removeChannel,
-  updateChannel,
-  setActiveChannel,
 } from '../../../lib/redux/modules/channels'
 
 

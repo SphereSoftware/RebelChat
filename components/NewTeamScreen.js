@@ -9,7 +9,6 @@ import {
   TwitterIcon,
   HipchatIcon,
   IrcIcon,
-  XmppIcon,
 } from './Icons'
 
 import NewSkypeForm from './NewSkypeForm'

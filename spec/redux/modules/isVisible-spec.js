@@ -1,12 +1,5 @@
 'use babel';
 
-import {
-  UserObject,
-  TeamObject,
-  ChannelObject,
-  MessageObject,
-} from '../../../lib/objects'
-
 import isVisible, { setVisiable } from '../../../lib/redux/modules/isVisible'
 
 describe('status reducer', () => {
