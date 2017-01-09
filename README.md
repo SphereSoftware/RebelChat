@@ -7,7 +7,7 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
 
 
-`RebelChat` is a integrated `Chat` system for the Hackable Atom Editor. It is a modern way to keep
+`RebelChat` is an integrated `Chat` system for the Hackable Atom Editor. It is a modern way to keep
 in touch with any team, and keep your messaging under control right in your editor.
 
 ## Why
