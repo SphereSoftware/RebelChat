@@ -7,7 +7,10 @@ import SideBar from './SideBar'
 import Main from './Main'
 import Loader from './Loader'
 import NewTeamScreen from './NewTeamScreen'
+import TeamsSettingsScreen from './TeamsSettingsScreen'
 import ErrorScreen from './ErrorScreen'
+import CloseButton from './CloseButton'
+import HideChatButton from './HideChatButton'
 
 // Style Section
 import * as colors from './colors'
@@ -47,11 +50,32 @@ class App extends Component {
   render() {
     const { status, teams, currentTeam } = this.props
 
-    if (status === 'empty' || status === 'addNewTeam') {
+    if (status === 'openTeamsSettings') {
+      // return Teams Settings page
+      return (
+        <CenteredWrapper>
+          <TeamsSettingsScreen />
+          <CloseButton />
+        </CenteredWrapper>
+      )
+    }
+
+    if (status === 'empty') {
+      return (
+        <CenteredWrapper>
+          <NewTeamScreen />
+          <HideChatButton />
+        </CenteredWrapper>
+      )
+    }
+
+    if (status === 'addNewTeam') {
       // return loader by default
       return (
         <CenteredWrapper>
           <NewTeamScreen />
+          <CloseButton />
+          <HideChatButton />
         </CenteredWrapper>
       )
     }
@@ -61,6 +85,7 @@ class App extends Component {
       return (
         <CenteredWrapper>
           <Loader />
+          <HideChatButton />
         </CenteredWrapper>
       )
     }
@@ -70,6 +95,7 @@ class App extends Component {
       return (
         <CenteredWrapper>
           <ErrorScreen />
+          <HideChatButton />
         </CenteredWrapper>
       )
     }

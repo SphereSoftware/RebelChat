@@ -9,6 +9,7 @@ import CurrentUserInfo from './CurrentUserInfo'
 import ChannelsList from './ChannelsList'
 import UsersList from './UsersList'
 import NewTeamButton from './NewTeamButton'
+import SettingsButtom from './SettingsButtom'
 
 import { TeamObject } from '../lib/objects'
 
@@ -22,6 +23,7 @@ const TeamsWrapepr = styled.div`
   color: ${colors.textSubtle};
   text-align: center;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 
   li {
@@ -80,8 +82,11 @@ class SideBar extends Component {
 
     return (
       <TeamsWrapepr>
-        {teams.map((team, index) => <SwitchTeam key={team.id} order={index} team={team} />)}
-        <NewTeamButton />
+        <div>
+          {teams.map((team, index) => <SwitchTeam key={team.id} order={index} team={team} />)}
+          <NewTeamButton />
+        </div>
+        <SettingsButtom />
       </TeamsWrapepr>
     )
   }

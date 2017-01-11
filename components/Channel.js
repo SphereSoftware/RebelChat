@@ -14,6 +14,10 @@ import classNames from 'classnames'
 import styled from 'styled-components'
 const ChannelElement = styled.div`
   padding: 2px 36px;
+  width: 255px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:hover {
     cursor: pointer;

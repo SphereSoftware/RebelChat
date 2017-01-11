@@ -9,6 +9,7 @@ import {
   TwitterIcon,
   HipchatIcon,
   IrcIcon,
+  ChevronLeftIcon,
 } from './Icons'
 
 import NewSkypeForm from './NewSkypeForm'
@@ -30,6 +31,14 @@ const Wrapper = styled.div`
     &:hover {
       color: ${colors.buttonBgHover};
     }
+  }
+
+  .back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 25px;
+    font-weight: bold;
   }
 `
 
@@ -59,6 +68,18 @@ export default class NewTeamScreen extends Component {
     }
   }
 
+  renderBackButton() {
+    if (this.state.client) {
+      return (
+        <a className="back" onClick={() => ::this.setState({ client: undefined })} >
+          <ChevronLeftIcon size={30} />
+        </a>
+      )
+    }
+
+    return <div />
+  }
+
   renderButtons() {
     if (this.state.client) {
       return <div />
@@ -77,6 +98,7 @@ export default class NewTeamScreen extends Component {
   render() {
     return (
       <Wrapper>
+        {this.renderBackButton()}
         {this.renderButtons()}
         {this.renderForm()}
       </Wrapper>

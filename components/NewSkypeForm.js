@@ -114,14 +114,6 @@ class NewSkypeForm extends Component {
     }, 300)
   }
 
-  close() {
-    const { teams, dispatch } = this.props
-
-    if (teams.length > 0) {
-      dispatch(setStatus('ready'))
-    }
-  }
-
   render() {
     return (
       <Wrapper>
@@ -134,8 +126,7 @@ class NewSkypeForm extends Component {
           <section>
             <button type="submit">Connect</button>
             <p>
-              If you have any questions you can read more <a tabIndex="-1" href="https://github.com/SphereSoftware/rebel-chat/wiki/Skype">here </a>.<br />
-              or you can <a tabIndex="-2" onClick={() => ::this.close()}> close this window</a>
+              If you have any questions you can read more <a tabIndex="-1" href="https://github.com/SphereSoftware/rebel-chat/wiki/Skype">here </a>.
             </p>
           </section>
         </form>
