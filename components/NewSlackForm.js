@@ -112,14 +112,6 @@ class NewSlackForm extends Component {
     }, 300)
   }
 
-  close() {
-    const { teams, dispatch } = this.props
-
-    if (teams.length > 0) {
-      dispatch(setStatus('ready'))
-    }
-  }
-
   render() {
     return (
       <Wrapper>
@@ -132,8 +124,7 @@ class NewSlackForm extends Component {
             <button type="submit">Connect</button>
             <p>
               If you have no access token,
-              you can read more about it <a tabIndex="-1" href="https://github.com/SphereSoftware/rebel-chat/wiki/Slack">here </a>. <br />
-              or you can <a tabIndex="-2" onClick={() => ::this.close()}> close this window</a>
+              you can read more about it <a tabIndex="-1" href="https://github.com/SphereSoftware/rebel-chat/wiki/Slack">here </a>.
             </p>
           </section>
         </form>

@@ -77,9 +77,11 @@ class MessagesList extends Component {
 
   componentWillUpdate() {
     const node = findDOMNode(this.msgListRef)
-    const { scrollHeight, clientHeight, scrollTop } = node
-    const buffer = 120
-    this.pinToBottom = clientHeight + scrollTop + buffer >= scrollHeight
+    if (node) {
+      const { scrollHeight, clientHeight, scrollTop } = node
+      const buffer = 120
+      this.pinToBottom = clientHeight + scrollTop + buffer >= scrollHeight
+    }
   }
 
   componentDidUpdate() {

@@ -3,6 +3,12 @@
 import DoNotDisturbIcon from './DoNotDisturbIcon'
 import FileIcon from './FileIcon'
 import PlusIcon from './PlusIcon'
+import CloseIcon from './CloseIcon'
+import CheckedIcon from './CheckedIcon'
+import UncheckedIcon from './UncheckedIcon'
+import TrashIcon from './TrashIcon'
+import ChevronLeftIcon from './ChevronLeftIcon'
+import SettingsIcon from './SettingsIcon'
 import OfflineIcon from './OfflineIcon'
 import OnlineIcon from './OnlineIcon'
 import SearchIcon from './SearchIcon'
@@ -23,6 +29,12 @@ export {
   DoNotDisturbIcon,
   FileIcon,
   PlusIcon,
+  CloseIcon,
+  CheckedIcon,
+  UncheckedIcon,
+  TrashIcon,
+  ChevronLeftIcon,
+  SettingsIcon,
   OfflineIcon,
   OnlineIcon,
   SearchIcon,

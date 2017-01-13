@@ -4,13 +4,15 @@ import React, { Component } from 'react'
 
 export default class HipchatIcon extends Component {
   render() {
+    const { size } = this.props
+    
     return (
       <svg
         viewBox="-15 17 32 32"
         fill="currentColor"
         preserveAspectRatio="xMidYMid meet"
-        height="90"
-        width="90"
+        height={size || 90}
+        width={size || 90}
       >
         <path d="M13,18c1.654,0,3,1.346,3,3v24c0,1.654-1.346,3-3,3h-24c-1.654,0-3-1.346-3-3V21c0-1.654,1.346-3,3-3H13 M13,17h-24 c-2.2,0-4,1.8-4,4v24c0,2.2,1.8,4,4,4h24c2.2,0,4-1.8,4-4V21C17,18.8,15.2,17,13,17L13,17z" />
         <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)" >

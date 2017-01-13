@@ -73,56 +73,61 @@ export default class ParsedMessage extends Component {
 
   parseLine(text) {
     const { safe } = this.props
-    // split by tags and spaces
-    return text.split(/(<.*?>.*?<\/.*?>|\s)/).map((word) => {
-      // Skip processing spaces
-      if (/^\s+$/.test(word)) {
+    try {
+      // split by tags and spaces
+      return text.split(/(<.*?>|<.*?>.*?<\/.*?>|\s)/).map((word) => {
+        // Skip processing spaces
+        if (/^\s+$/.test(word)) {
+          return word
+        }
+
+        // replace SkypeSmile message <ss type="smile">:)</ss>
+        if (word.indexOf('<ss') === 0) {
+          const [type, emoticon] = word.split(/<.*type="(.*)">(.*)<\/ss>/).slice(1, 3)
+          return <SkypeSmile type={type} emoticon={emoticon} />
+        }
+
+        // Replace with channel tag
+        if (word.indexOf('<!') === 0) {
+          const [id, name] = word.split(/<(.*)>/)[1].split('|')
+          return <SlackAlertTag id={id} name={name} />
+        }
+
+        // Replace with channel tag
+        if (word.indexOf('<#') === 0) {
+          const [id, name] = word.split(/<(.*)>/)[1].split('|')
+          return <SlackChannelTag id={id} name={name} />
+        }
+
+        // Replace with user tag
+        if (word.indexOf('<@') === 0) {
+          const [id, name] = word.split(/<(.*)>/)[1].split('|')
+          return <SlackUserTag id={id} name={name} />
+        }
+
+        // Replace with link tag
+        if (word.indexOf('<http') === 0) {
+          const [id, name] = word.split(/<(.*)>/)[1].split('|')
+          return <SlackLinkTag id={id} name={name} />
+        }
+
+        // Replace with emoji tag, the Emoji component will render the
+        // word if no such emoji found
+        if (word.slice(0, 1) === ':' && word.slice(-1) === ':') {
+          return <Emoji emoji={word} size="16" />
+        }
+
+        // return by default
+        if (safe) {
+          return ReactHtmlParser(word)
+        }
+
         return word
-      }
-
-      // replace SkypeSmile message <ss type="smile">:)</ss>
-      if (word.indexOf('<ss') === 0) {
-        const [type, emoticon] = word.split(/<.*type="(.*)">(.*)<\/ss>/).slice(1, 3)
-        return <SkypeSmile type={type} emoticon={emoticon} />
-      }
-
-      // Replace with channel tag
-      if (word.indexOf('<!') === 0) {
-        const [id, name] = word.split(/<(.*)>/)[1].split('|')
-        return <SlackAlertTag id={id} name={name} />
-      }
-
-      // Replace with channel tag
-      if (word.indexOf('<#') === 0) {
-        const [id, name] = word.split(/<(.*)>/)[1].split('|')
-        return <SlackChannelTag id={id} name={name} />
-      }
-
-      // Replace with user tag
-      if (word.indexOf('<@') === 0) {
-        const [id, name] = word.split(/<(.*)>/)[1].split('|')
-        return <SlackUserTag id={id} name={name} />
-      }
-
-      // Replace with link tag
-      if (word.indexOf('<http') === 0) {
-        const [id, name] = word.split(/<(.*)>/)[1].split('|')
-        return <SlackLinkTag id={id} name={name} />
-      }
-
-      // Replace with emoji tag, the Emoji component will render the
-      // word if no such emoji found
-      if (word.slice(0, 1) === ':' && word.slice(-1) === ':') {
-        return <Emoji emoji={word} size="16" />
-      }
-
-      // return by default
-      if (safe) {
-        return ReactHtmlParser(word)
-      }
-
-      return word
-    })
+      })
+    } catch (e) {
+      console.log("This line can't be parsed", text, e)
+      return (<span style={{ border: '1px solid red' }}>This line can not be parsed {text}</span>)
+    }
   }
 
   render() {

@@ -4,13 +4,15 @@ import React, { Component } from 'react'
 
 export default class SkypeIcon extends Component {
   render() {
+    const { size } = this.props
+    
     return (
       <svg
         viewBox="-289 381 32 32"
         fill="currentColor"
         preserveAspectRatio="xMidYMid meet"
-        height="90"
-        width="90"
+        height={size || 90}
+        width={size || 90}
       >
         <g>
           <path d="M-261,382c1.7,0,3,1.3,3,3v24c0,1.7-1.3,3-3,3h-24c-1.7,0-3-1.3-3-3v-24c0-1.7,1.3-3,3-3H-261 M-261,381h-24 c-2.2,0-4,1.8-4,4v24c0,2.2,1.8,4,4,4h24c2.2,0,4-1.8,4-4v-24C-257,382.8-258.8,381-261,381L-261,381z" />
