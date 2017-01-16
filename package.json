@@ -1,7 +1,7 @@
 {
   "name": "RebelChat",
   "main": "./lib/main",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Rebel Chat is a modern way to keep in touch with any team using Slack, Skype, HipChat right from your Atom editor. Keep all your communications at one place",
   "keywords": [
     "rebel",
